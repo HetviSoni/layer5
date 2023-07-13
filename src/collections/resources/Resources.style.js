@@ -1,5 +1,8 @@
 import styled from "styled-components";
 export const ResourcesWrapper = styled.div`
+  .benefits{
+    color: ${props => props.theme.whiteToBlack};
+  }
   color: #000;
   .sub-heading {
     color: gray;
@@ -313,6 +316,13 @@ iframe{
         color: black;
       }
     }
+  }
+
+  /* ==============
+  styles for hpes-adoption-of-meshery-and-meshmap
+  =======================*/
+  .benefits{
+    color: ${props => props.theme.whiteToBlack};
   }
 }
 `;
