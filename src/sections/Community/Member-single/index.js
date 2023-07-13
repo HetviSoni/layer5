@@ -22,6 +22,7 @@ import writerIcon from "../../../assets/images/writer-program/writer-program-bad
 import docsLogo from "../../../assets/images/docs/docs.svg";
 import mesheryCatalogLogo from "../../../assets/images/meshery/meshery-catalog.svg";
 import dockerExtensionLogo from "../../../assets/images/docker-extension/docker-extension-meshery-logo.svg";
+import meshMapLogo from "../../../assets/images/meshmap/icon-only/meshmap-icon.svg";
 import Button from "../../../reusecore/Button";
 
 const MemberSingle = ({ frontmatter }) => {
@@ -31,6 +32,7 @@ const MemberSingle = ({ frontmatter }) => {
     github,
     twitter,
     image_path,
+    layer5,
     meshmate,
     linkedin,
     location,
@@ -150,6 +152,17 @@ const MemberSingle = ({ frontmatter }) => {
                           </Link>
                         </li>
                       )}
+                      {badges.includes("meshmap") && (
+                        <li>
+                          <Link to="/meshmap" >
+                            <img
+                              className="profile-social-links"
+                              src={meshMapLogo}
+                              alt="MeshMap Logo"
+                            />
+                          </Link>
+                        </li>
+                      )}
                       {badges.includes("docker-extension") && (
                         <li>
                           <Link to="/docker-extension-meshery">
@@ -248,6 +261,13 @@ const MemberSingle = ({ frontmatter }) => {
                     <li>
                       <a href={`https://Linkedin.com/in/${linkedin}`}>
                         <FaLinkedin className="linkedin" size={32} />
+                      </a>
+                    </li>
+                  )}
+                  {layer5 && (
+                    <li>
+                      <a href={`https://meshery.layer5.io/user/${layer5}`}>
+                        <img src={mesheryLogo} alt="meshery-icon"></img>
                       </a>
                     </li>
                   )}
